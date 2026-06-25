@@ -1,0 +1,37 @@
+Viscosity Vehicle Damage — License
+Copyright (c) 2026 AndyBodnar ("Viscosity"). All rights reserved.
+
+This software and its source code (the "Resource") are made available for use,
+not ownership. By downloading, copying, installing, or using the Resource, you
+agree to the terms below.
+
+1. PERMITTED USE
+   You may install, run, and modify the Resource on FiveM servers that you own
+   or operate, including private modifications made for your own server's use.
+
+2. ATTRIBUTION (REQUIRED)
+   You must keep all author credits and copyright notices intact and unobscured,
+   including this LICENSE, the README, the `author` field in fxmanifest.lua, and
+   the credit banners at the top of each source file. Any public-facing use must
+   credit "AndyBodnar (Viscosity)" as the original author.
+
+3. PROHIBITED WITHOUT PRIOR WRITTEN PERMISSION FROM THE AUTHOR
+   a. Selling, licensing, renting, or otherwise commercially distributing the
+      Resource or any derivative of it.
+   b. Redistributing, re-uploading, or publishing the Resource (in whole or in
+      part, original or modified) as your own work or under another name.
+   c. Uploading the Resource to marketplaces, "leak" sites, or any public
+      repository represented as your own creation.
+   d. Removing, altering, or obscuring the author credits or this license.
+
+4. DERIVATIVES
+   Modifications for your own server are permitted under Section 1. Publicly
+   distributing a modified version requires written permission and must retain
+   attribution to the original author.
+
+5. NO WARRANTY
+   The Resource is provided "AS IS", without warranty of any kind, express or
+   implied. In no event shall the author be liable for any claim, damages, or
+   other liability arising from or in connection with the Resource.
+
+For commercial licensing or redistribution permission, contact the author.

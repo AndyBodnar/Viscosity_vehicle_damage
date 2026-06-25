@@ -53,4 +53,8 @@ Set `Config.Debug = true` for a live `[vsfdmg]` readout in F8 and the `/vsfdmg` 
 
 ## License
 
-Do what you want with it. Credit's appreciated but not required.
+Copyright © 2026 **AndyBodnar (Viscosity)**. All rights reserved. See [LICENSE](LICENSE).
+
+**Plain version:** run it on your own server and modify it however you like. Do **not** resell it, repackage it, re-upload it as your own, or strip the credits. Public use must credit AndyBodnar (Viscosity). If you want to do something the license doesn't cover, ask me first.
+
+This is my work. I'm sharing it, not giving it away — don't snipe it.

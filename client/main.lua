@@ -1,3 +1,8 @@
+-- ============================================================================
+--  viscosity_vehicledamage  ·  (c) 2026 AndyBodnar (Viscosity)
+--  https://github.com/AndyBodnar/Viscosity_vehicle_damage
+--  Server use only. No resale, repackaging, or credit removal. See LICENSE.
+-- ============================================================================
 --[[
     viscosity_vehicledamage — driver-side processing loop
     --------------------------------------------------------------------------
