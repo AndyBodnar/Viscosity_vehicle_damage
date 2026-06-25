@@ -4,11 +4,11 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — viscosity_core integration shim
+    viscosity_vehicledamage, viscosity_core integration shim
     --------------------------------------------------------------------------
     Every call into the framework lives here so the damage logic stays decoupled
     from core's export names. FiveM gives each resource its own Lua state, so we
-    reach core only through its registered exports — never its `Vsf` globals.
+    reach core only through its registered exports, never its `Vsf` globals.
 ]]
 
 VDCore = {}

@@ -4,7 +4,7 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — effects & networking
+    viscosity_vehicledamage, effects & networking
     --------------------------------------------------------------------------
     A "break" is a string key applied to a vehicle:
         bumperF | bumperR | door:0..5 | wheel:0/1/4/5
@@ -14,7 +14,7 @@
     Every other client mirrors them through the statebag change handler so the
     wreck looks identical for everyone, including late joiners.
 
-    Health pools (body/engine/petrol) are intentionally NOT in here — they sync
+    Health pools (body/engine/petrol) are intentionally NOT in here, they sync
     natively, so the leaking-fuel trail and smoke appear everywhere on their own.
 ]]
 
@@ -22,7 +22,7 @@ Effects = {}
 
 local STATE_KEY = 'vsf_vehdamage'
 
--- appliedCache[netId] = { [key] = true } — guards against re-applying a break
+-- appliedCache[netId] = { [key] = true }, guards against re-applying a break
 -- (the driver applies immediately, then the statebag echo would otherwise repeat).
 local appliedCache = {}
 
@@ -40,7 +40,7 @@ local function doBreak(veh, key)
     if not DoesEntityExist(veh) then return end
 
     if key == 'bumperF' or key == 'bumperR' then
-        -- Bumpers have no dedicated native — drive heavy localized deformation at
+        -- Bumpers have no dedicated native, drive heavy localized deformation at
         -- the model's front/rear extent so the panel shears off. GetModelDimensions
         -- makes this work for any vehicle regardless of length.
         local minD, maxD = GetModelDimensions(GetEntityModel(veh))
@@ -78,7 +78,7 @@ function Effects.ApplyLocal(veh, key)
 end
 
 --==========================================================================--
--- DRIVER SIDE: record a break — apply locally + replicate via statebag.
+-- DRIVER SIDE: record a break, apply locally + replicate via statebag.
 --==========================================================================--
 function Effects.Record(veh, key)
     if not Effects.ApplyLocal(veh, key) then return end -- already broken (or applied), skip
@@ -97,7 +97,7 @@ function Effects.Has(veh, key)
     return type(data) == 'table' and data[key] == true
 end
 
--- Wipe damage state — called on repair.
+-- Wipe damage state, called on repair.
 function Effects.Clear(veh)
     appliedCache[netIdOf(veh)] = nil
     if Config.NetworkBreaks and DoesEntityExist(veh) and NetworkGetEntityIsNetworked(veh) then

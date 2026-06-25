@@ -4,7 +4,7 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — field repair ("limp home")
+    viscosity_vehicledamage, field repair ("limp home")
     --------------------------------------------------------------------------
     On foot + standing at a dead engine -> [E] prompt -> wrench emote (ox_lib
     progressCircle) -> engine patched into the "rough" band so it runs but
@@ -107,8 +107,8 @@ local function doFieldRepair(veh)
         VDCore.Notify({
             title = 'Field Repair',
             message = left > 0
-                and ('Patched — get it to a shop. (%d temp fix%s left)'):format(left, left == 1 and '' or 'es')
-                or  'Patched — this is the last time. Get it to a shop NOW.',
+                and ('Patched, get it to a shop. (%d temp fix%s left)'):format(left, left == 1 and '' or 'es')
+                or  'Patched, this is the last time. Get it to a shop NOW.',
             type = left > 0 and 'success' or 'warning',
         })
     else

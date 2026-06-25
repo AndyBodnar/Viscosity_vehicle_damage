@@ -4,7 +4,7 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — configuration
+    viscosity_vehicledamage, configuration
     --------------------------------------------------------------------------
     All health pools in GTA are floats:
         body   : 0..1000   (1000 = pristine, deformation scales as it drops)
@@ -40,7 +40,7 @@ Config.ImmuneClasses = { [13] = true, [14] = true, [15] = true, [16] = true, [21
 -- IMPACT DETECTION
 --==========================================================================--
 -- Crashes are detected by DECELERATION (speed scrubbed in one tick), NOT by
--- body-health drop — because god-mode / invincible vehicles never lose body
+-- body-health drop, because god-mode / invincible vehicles never lose body
 -- health. The script then applies the damage itself with explicit setters, which
 -- bypass invincibility. This makes the system work on ANY vehicle.
 Config.Impact = {
@@ -77,7 +77,7 @@ Config.Impact = {
 -- severity roll succeeds. chance = baseChance * severity.
 --==========================================================================--
 -- Each part detaches when the car is WORN DOWN (body <= body) OR a single hit is
--- VIOLENT enough (severity >= hardImpact, 0..1) — so an 80mph head-on rips parts
+-- VIOLENT enough (severity >= hardImpact, 0..1), so an 80mph head-on rips parts
 -- off a pristine car, while gentle wear also sheds them over time.
 Config.Cosmetic = {
     bumperFront = { body = 700, chance = 0.90, hardImpact = 0.45 },
@@ -151,7 +151,7 @@ Config.RepairJumpThreshold = 60.0
 -- FIELD REPAIR ("limp home")
 -- When the engine is dead, a player on foot can wrench at the engine bay to
 -- patch it *just* enough to drive to a real mechanic. The patch lands the engine
--- in the "rough" band, so it runs but sputters — by design.
+-- in the "rough" band, so it runs but sputters, by design.
 --==========================================================================--
 Config.FieldRepair = {
     enabled        = true,
@@ -163,7 +163,7 @@ Config.FieldRepair = {
     limpHealth     = 250.0,  -- engine health after patch (rough band: runs, sputters)
 
     -- A leaking/empty tank would re-starve the engine, so the patch also tops the
-    -- tank just enough to reach a shop (still in the leak band — keep moving).
+    -- tank just enough to reach a shop (still in the leak band, keep moving).
     sealTankPartial = true,
     tankBuffer      = 90.0,  -- petrol health granted ABOVE Config.Petrol.starveBelow
 

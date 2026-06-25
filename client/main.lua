@@ -4,7 +4,7 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — driver-side processing loop
+    viscosity_vehicledamage, driver-side processing loop
     --------------------------------------------------------------------------
     Only the DRIVER of a vehicle runs this (they own its physics). Each tick we:
       1. Detect impacts by diffing body health, scaled by speed -> "severity".
@@ -26,8 +26,8 @@ end
 -- Engine failure stages for branded milestone toasts (fire on getting WORSE only).
 local STAGE_RANK = { ok = 0, rough = 1, stall = 2, dead = 3 }
 local STAGE_MSG = {
-    rough = { title = 'Engine', message = 'Running rough — get it to a mechanic.', type = 'warning' },
-    stall = { title = 'Engine', message = 'Sputtering — it\'s about to stall.',    type = 'warning' },
+    rough = { title = 'Engine', message = 'Running rough, get it to a mechanic.', type = 'warning' },
+    stall = { title = 'Engine', message = 'Sputtering, it\'s about to stall.',    type = 'warning' },
     dead  = { title = 'Engine', message = 'The engine\'s dead.',                    type = 'error'   },
 }
 
@@ -57,7 +57,7 @@ local function tryBreak(veh, key, spec, body, severity)
 end
 
 -- Apply crash damage with EXPLICIT setters (these bypass vehicle invincibility /
--- god mode, unlike collision damage). The script — not GTA — is the authority.
+-- god mode, unlike collision damage). The script, not GTA, is the authority.
 local function applyCrashDamage(veh, severity, catastrophic)
     local I = C.Impact
 
@@ -211,7 +211,7 @@ end
 -- FAST crash-detection thread.
 -- A collision dumps its speed over ~100ms (several frames), so a slow tick would
 -- split one big crash into small ones. We sample fast and measure the drop from
--- the PEAK speed in a short rolling window — the true impact energy.
+-- the PEAK speed in a short rolling window, the true impact energy.
 --==========================================================================--
 CreateThread(function()
     local hist = {}        -- recent { t, s } samples within the window
@@ -302,7 +302,7 @@ CreateThread(function()
             if C.Notify then
                 local leaking = petrol < C.Petrol.leakBelow
                 if leaking and not lastLeak then
-                    VDCore.Notify({ title = 'Vehicle', message = 'Fuel leak — you\'re losing fuel.', type = 'warning' })
+                    VDCore.Notify({ title = 'Vehicle', message = 'Fuel leak, you\'re losing fuel.', type = 'warning' })
                 end
                 lastLeak = leaking
 

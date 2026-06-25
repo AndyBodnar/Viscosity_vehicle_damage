@@ -4,7 +4,7 @@
 --  Server use only. No resale, repackaging, or credit removal. See LICENSE.
 -- ============================================================================
 --[[
-    viscosity_vehicledamage — server (statebag authority)
+    viscosity_vehicledamage, server (statebag authority)
     --------------------------------------------------------------------------
     With sv_stateBagStrictMode enabled, clients can't write statebags. Clients
     REPORT damage via net events; the server validates (entity exists + reporter
